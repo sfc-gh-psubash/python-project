@@ -16,13 +16,13 @@ def get_env_var_config() -> dict:
     """
     try:
         return {
-            "user": environ["SNOWSQL_USER"],
-            "password": environ["SNOWSQL_PWD"],
-            "account": environ["SNOWSQL_ACCOUNT"],
-            # "role": environ["SNOWSQL_ROLE"],
-            "warehouse": environ["SNOWSQL_WAREHOUSE"],
-            "database": environ["SNOWSQL_DATABASE"],
-            "schema": environ["SNOWSQL_SCHEMA"],
+            "user": environ["SNOW_USER"],
+            "password": environ["SNOW_PASSWORD"],
+            "account": environ["SNOW_ACCOUNT"],
+            "role": environ["SNOW_ROLE"],
+            "warehouse": environ["SNOW_WAREHOUSE"],
+            "database": environ["SNOW_DATABASE"],
+            "schema": environ["SNOW_SCHEMA"],
         }
     except KeyError as exc:
         raise KeyError(

@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, "/Users/psubash/Documents/GitHub/python-project")
 from src.udf.functions import combine
 
 

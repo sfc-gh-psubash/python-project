@@ -18,7 +18,7 @@ def run(snowpark_session: Session) -> int:
     from src.udf.functions import combine
 
     snowpark_session.add_import(
-        path="../src/udf/functions.py", import_path="src.udf.functions"
+        path="/Users/psubash/Documents/GitHub/python-project/src/udf/functions.py", import_path="src.udf.functions"
     )
     combine = snowpark_session.udf.register(
         combine, StringType(), input_types=[StringType(), StringType()]
@@ -45,8 +45,7 @@ if __name__ == "__main__":
     # This entrypoint is used for local development.
 
     import sys
-
-    sys.path.insert(0, "..")  # Necessary to import from udf and util directories
+    sys.path.insert(0, "/Users/psubash/Documents/GitHub/python-project")  # Necessary to import from udf and util directories
 
     from src.util.local import get_env_var_config
 
